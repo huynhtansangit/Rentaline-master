@@ -1,0 +1,168 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/backround"
+    tools:context=".MainActivity"
+    android:id="@+id/constraint_main">
+
+
+    <ProgressBar
+        android:id="@+id/pro_login"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        style="?android:attr/progressBarStyle"
+        android:indeterminateDrawable="@drawable/progressbar_custom"
+        android:indeterminateDuration="@android:integer/config_mediumAnimTime"
+        app:layout_constraintBottom_toTopOf="@+id/btn_login"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tv_forgotpass" />
+
+    <EditText
+        android:id="@+id/et_username"
+        android:layout_width="330dp"
+        android:layout_height="50dp"
+        android:background="@drawable/et_username"
+        android:ems="10"
+        android:focusableInTouchMode="true"
+        android:hint="Email"
+        android:inputType="text"
+        android:paddingLeft="60dp"
+        android:textSize="20dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/et_password"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.389" />
+
+    <EditText
+        android:id="@+id/et_password"
+        android:layout_width="330dp"
+        android:layout_height="50dp"
+        android:background="@drawable/et_password"
+        android:ems="10"
+        android:hint="Password"
+        android:inputType="textPassword"
+        android:paddingLeft="60dp"
+        android:textSize="20dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.058"
+        app:layout_constraintStart_toStartOf="@+id/tv_forgotpass"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.464" />
+
+    <ImageView
+        android:id="@+id/iv_logo"
+        android:layout_width="110dp"
+        android:layout_height="80dp"
+        app:layout_constraintBottom_toTopOf="@+id/et_username"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.905"
+        app:srcCompat="@drawable/forrenticon" />
+
+    <Button
+        android:id="@+id/btn_login"
+        android:layout_width="220dp"
+        android:layout_height="50dp"
+        android:background="@drawable/ripple_button"
+        android:fontFamily="@font/abril_fatface"
+        android:text="LOGIN"
+        android:textColor="@color/rippelColor"
+        android:textSize="25dp"
+        android:transitionName="btnTrans"
+        app:layout_constraintBottom_toTopOf="@+id/im_rentaline"
+        app:layout_constraintStart_toStartOf="@+id/tx_register"
+        app:layout_constraintTop_toTopOf="@+id/btn_face"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <Button
+        android:id="@+id/btn_face"
+        android:layout_width="52dp"
+        android:layout_height="50dp"
+        android:background="@drawable/iv_face"
+        app:layout_constraintBottom_toTopOf="@+id/im_rentaline"
+        app:layout_constraintEnd_toStartOf="@+id/btn_google"
+        app:layout_constraintHorizontal_bias="0.4"
+        app:layout_constraintStart_toEndOf="@+id/btn_login"
+        app:layout_constraintTop_toTopOf="@+id/btn_google"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <Button
+        android:id="@+id/btn_google"
+        android:layout_width="53dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="8dp"
+        android:background="@drawable/iv_google"
+        app:layout_constraintBottom_toTopOf="@+id/im_rentaline"
+        app:layout_constraintEnd_toEndOf="@+id/et_password"
+        app:layout_constraintTop_toBottomOf="@+id/et_password"
+        app:layout_constraintVertical_bias="0.811" />
+
+    <ImageView
+        android:id="@+id/im_rentaline"
+        android:layout_width="300dp"
+        android:layout_height="80dp"
+        android:background="?android:attr/selectableItemBackgroundBorderless"
+        android:onClick="dummyCLick"
+        android:src="@drawable/logo_app"
+        android:transitionName="logoImage"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.405"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.825" />
+
+    <TextView
+        android:id="@+id/tx_register"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/tx_register"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.156"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/im_rentaline"
+        app:layout_constraintVertical_bias="0.295" />
+
+    <TextView
+        android:id="@+id/tv_forgotpass"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="?android:attr/selectableItemBackground"
+        android:fontFamily="@font/abhaya_libre"
+        android:onClick="dummyCLick"
+        android:text="Forgot password ?"
+        android:textColor="#ffff"
+        android:textSize="18dp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/btn_login"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/btn_login"
+        app:layout_constraintTop_toBottomOf="@+id/et_password"
+        app:layout_constraintVertical_bias="0.072" />
+
+    <CheckBox
+        android:id="@+id/cb_showpass"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Show password"
+        android:textSize="18sp"
+        app:layout_constraintBottom_toTopOf="@+id/btn_face"
+        app:layout_constraintEnd_toEndOf="@+id/btn_google"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toEndOf="@+id/tv_forgotpass"
+        app:layout_constraintTop_toBottomOf="@+id/et_password"
+        app:layout_constraintVertical_bias="0.0" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
